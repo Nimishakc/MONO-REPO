@@ -1,24 +1,18 @@
 {
-    "tasksRunnerOptions": {
-        "default": {
-            "runner": "nx/tasks-runners/default",
-            "options": {
-                "cacheableOperations": [
-                    "build"
-                ]
-            }
-        }
-    },
-    "targetDefaults": {
-        "start": {
-            "dependsOn": [
-                "^build"
-            ]
-        },
-        "build": {
-            "inputs": [
-                "!{projectRoot}/**/*.md"
-            ]
-        }
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "nx/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build"]
+      }
     }
+  },
+  "targetDefaults": {
+    "start": {
+      "dependsOn": ["^build"]
+    },
+    "build": {
+      "inputs": ["!{projectRoot}/**/*.md"]
+    }
+  }
 }
